@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uevent@2/browser.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/plugins/markers.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/plugins/markers.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/plugins/virtual-tour.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/plugins/virtual-tour.min.js"></script>
+
+    
+
+
+
+    <title>Group 10 : เว็บไซต์แนะนำตึกอธิการมหาวิทยาลัยขอนแก่น</title>
+    <style>
+        html, body, #photosphere {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Prompt', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="photosphere"></div>
+    <script type="text/template" id="txt-1" >
+
+        <h1>Sirikunakorn Building</h1>
+
+        <p>
+            เป็นส่วนหนึ่งของกองกลาง สำนักงานอธิการบดี มหาวิทยาลัยขอนแก่น ให้บริการห้องประชุมขนาดต่างๆ พร้อมโสตทัศนูปกรณ์
+        </p>
+        <img src="https://lh5.googleusercontent.com/p/AF1QipPNFrj5hNHGcCsDOxlXq1TM0d_-oEwX6btZ65Po=w1080-k-no" alt="ตึกงามๆ" style="height:200px">
+
+    </script>
+    <!-- -------------------------------------------------------------------------------- -->
+    <script type="text/template" id="txt-2">
+        <h1>ตึกอธิการบดี มหาวิทยาลัยขอนแก่น</h1>
+        <img src="360/360/marker2.png" alt="ตึกงามๆ" style="height:200px">
+
+    </script>
+    <!-- -------------------------------------------------------------------------------- -->
+    <script type="text/template" id="txt-3">
+        <h1>Net  Zero Enery Building</h1>
+        <p>เป็นตึกที่ได้รับการออกแบบทางวิศวกรรม ใช้พลังงานลม พลักงงานแสดงอาทิตย์ </p>
+        <a href="https://www.slideshare.net/denpong/nzebkku" target="_blank">ข้อมูลเพิ่มเติม</a>
+    </script>
+        <!-- -------------------------------------------------------------------------------- -->
+
+    <script type="text/template" id="txt-4">
+        <h1>วงเหวียนหน้าตึกอธิการบดี</h1>
+        <img src="360/360/marker4.png" alt="ตึกงามๆ" style="height:200px">
+                <!-- -------------------------------------------------------------------------------- -->
+    </script>
+    <script type="text/template" id="txt-5">
+        <h1>เป็นที่จอด Shuttle bus kku เก่า</h1>
+        <p>เป็นจุดพักรถขนาดใหญ่ รถส่วนใหญ่จะมาพักที่นี่</p>
+        <img src="360/360/marker5.png" alt="ตึกงามๆ" style="height:200px">
+        
+    </script>
+            <!-- -------------------------------------------------------------------------------- -->
+    <script type="text/template" id="txt-9">
+        <h1>ศูนย์รับเอกสารส่วนกลาง</h1>
+        <p>เป็นจุดรับส่งเอกสาร และมีที่นั่งให้นั่งเล่น</p>
+    </script>
+     <!-- -------------------------------------------------------------------------------- -->
+    <script type="text/template" id="txt-10">
+        <h1>Good แหนมเมือง</h1>
+        <p>เป็นรายอาหารสไตล์เวียดนาม</p>
+        <img src="360/360/marker10.png" alt="ตึกงามๆ" style="height:200px">
+        <img src="360/360/marker10_1.png" alt="ตึกงามๆ" style="height:200px">
+
+    </script>
+         <!-- -------------------------------------------------------------------------------- -->
+    <script type="text/template" id="txt-6">
+        <h1>สวนเกษตร</h1>
+        <img src="360/360/marker11.png" alt="ตึกงามๆ" style="height:200px">
+    </script>
+    <script type="text/template" id="txt-14">
+        <h1>สวนเกษตรของคณะเกษตรศาสตร์ มหาวิทยาลัยขอนแก่น</h1>
+        <p>เป็นสวนเกษตรที่ นักศึกษาคณะเกษตรศาสตร์ มาทำกิจกรรมที่นี่ เช่น ดูแลสวยผักเป็นต้น</p>
+        <img src="360/360/IMG_1342.png" alt="" style="height:200px">
+        <img src="360/360/IMG_1341.png" alt="" style="height:200px">
+    </script>
+    <script type="text/template" id="txt-11">
+        <h1>สำนักอธิการบดี</h1>
+        <p>มีหน่วยงานย่อยภายในมากมาย</p>
+        <p>
+            หน่วยงานบริหารจัดการกลาง <br>
+            1) กองตรวจสอบภายใน<br>
+            2) กองกฎหมาย<br>
+            3) กองการกีฬา<br>
+            4) กองการต่างประเทศ<br>
+            5) กองคลัง<br>
+            6) กองจัดการสาธารณูปโภค พลังงานและสิ่งแวดล้อม<br>
+            7)  กองทรัพยากรบุคคล<br>
+            8) กองบริการหอพักนักศึกษา<br>
+            9) กองบริหารงานกลาง<br>
+            10) กองบริหารงานวิจัย<br>
+            11) กองป้องกันและรักษาความปลอดภัย<br>
+            12) กองพัฒนาคุณภาพการศึกษา<br>
+            13) กองพัฒนานักศึกษาและศิษย์เก่าสัมพันธ์<br>
+            14) กองยุทธศาสตร์<br>
+            15) กองสื่อสารองค์กร<br>
+            16) กองอาคารและสถานที่<br><br>
+
+            หน่วยงานสนับสนุนภารกิจและยุทธศาสตร์<br>
+            สถาบันการสอนวิชาศึกษาทั่วไป<br>
+            สถาบันขงจื่อ<br>
+            สถาบันภาษา<br>
+            สถาบันวิจัยความมั่นคงด้านอาหาร พลังงาน และน้ำ<br>
+            อนุภูมิภาคลุ่มน้ำโขง<br>
+            สถาบันวิจัยเพื่อพัฒนาสังคม<br>
+            สถาบันวิจัยมะเร็งท่อน้ำดี<br>
+            สถาบันวิจัยยุทธศาสตร์และประสานความร่วมมือเพื่อพัฒนาภาคตะวันออกเฉียงเหนือ<br>
+            สถาบันวิจัยและพัฒนาวิชาชีพครูสำหรับอาเซียน<br>
+            สถาบันวิจัยวิทยาศาสตร์สุขภาพลุ่มน้ำโขง<br>
+            ศูนย์ทรัพย์สินทางปัญญา<br>
+            ศูนย์นวัตกรรมการเรียนการสอน<br>
+            ศูนย์บริหารจัดการทรัพย์สิน<br>
+            ศูนย์จริยธรรมการวิจัยในมนุษย์<br>
+            ศูนย์ประสานงานโครงการอันเนื่องมาจากพระราชดำริ<br>
+            ศูนย์ศิลปวัฒนธรรม<br>
+            ศูนย์สัตว์ทดลองภาคตะวันออกเฉียงเหนือ<br>
+            ศูนย์อาเซียนศึกษา<br>
+            ศูนย์พิพิธภัณฑ์และแหล่งเรียนรู้ตลอดชีวิต<br>
+            สถาบันวิจัยเพื่อพัฒนาสมรรถนะมนุษย์และการเสริมสร้างสุขภาพ<br>
+            สถาบันวิจัยและบริการด้านออทิซึม<br>
+            สถาบันวิจัยและนวัตกรรมวัสดุนาโนเพื่อพลังงาน<br>
+            สถาบันวิจัยแคนนาบิสครบศาสตร์ มหาวิทยาลัยขอนแก่น<br>
+            ศูนย์บริหารเทคโนโลยีและนวัตกรรม<br>
+            สถาบันเคเคยูอะคาเดมี่ (KKU Academy)<br>
+            หน่วยงานสนับสนุนยุทธศาสตร์ด้านวิสาหกิจ<br>
+            โรงพิมพ์มหาวิทยาลัยขอนแก่น<br>
+            ศูนย์บริหารจัดการด้านโรงแรม<br>
+            ศูนย์บริการสู่ชุมชน<br>
+            ศูนย์สื่อการเรียนรู้<br>
+            อุทยานวิทยาศาสตร์<br>
+            สถาบันวิจัยทรัพยากรน้ำใต้ดิน<br>
+            โรงงานแบตเตอรี่และพลังงานยุคใหม่
+        </p>
+    </script>
+    <script type="text/template" id="txt-15">
+        <h1>จุดรับแจ้งเหตุภายในมหาวิทยาลัยขอนแก่น</h1>
+        <p><a href="https://security.kku.ac.th/?p=2293" target="_blank">สามารถดูรายละเอียดเพิ่มเติมได้จากลิ้งนี้</a></p>
+        <img src="360/360/12.jpg" alt="" style='width: 300px;'>
+        <img src="360/360/122.jpg" alt="" style='width: 300px;'>
+    </script>
+    <script type="text/template" id="txt-12">
+        <h1>ศาลข้างหน้าตึกอธิการ</h1>
+        <img src="360/360/marker12.png" alt="" style='width: 300px;'>
+        
+    </script>
+    <script type="text/template" id="txt-8"></script>
+    <script>
+        var viewer = new PhotoSphereViewer.Viewer({
+        container: 'photosphere',
+        loadingImg: 'img/load.gif',
+        touchmoveTwoFingers: true,
+        mousewheelCtrlKey: true,
+        caption    : 'Group 10 : เว็บไซต์แนะนำตึกอธิการมหาวิทยาลัยขอนแก่น',
+        defaultLong: '100deg',
+        plugins    : [
+            [PhotoSphereViewer.MarkersPlugin, {
+                
+            }],
+            [PhotoSphereViewer.VirtualTourPlugin, {
+            positionMode: PhotoSphereViewer.VirtualTourPlugin.MODE_GPS,
+            renderMode  : PhotoSphereViewer.VirtualTourPlugin.MODE_3D,
+            }],
+        ],
+        });
+
+        var virtualTour = viewer.getPlugin(PhotoSphereViewer.VirtualTourPlugin);
+
+      
+        virtualTour.setNodes([
+            {
+                id      : '1',
+                panorama: '360/360/7.jpg',
+                thumbnail: '360/360/01.png',
+                name    : 'จุดที่หน้าสนใจจุดที่หนึ่ง',
+                links   : [
+                    { nodeId: '2' },
+                    { nodeId: '5'}
+                ],
+                markers: [
+                    {
+                        id: 'marker-1',
+                        image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+                   
+                        width    : 32,
+                        height   : 32,
+                        anchor   : 'bottom center',
+                        longitude: '5.606',
+                        latitude: '0.508',
+                        tooltip :'Sirikunakorn Building',
+                        content: $("#txt-1").html()
+                    },
+                    {
+                        id: 'marker-2',
+                        image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+            
+                        width    : 32,
+                        height   : 32,
+                        anchor   : 'bottom center',
+                        longitude: '2',
+                        latitude: '0.21',
+                        tooltip :'ตึกอธิการบดี มหาวิทยาลัยขอนแก่น',
+                        content: $("#txt-2").html()
+                    },
+                    {
+                        id: 'marker-3',
+                        image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+                       
+                        width    : 32,
+                        height   : 32,
+                        anchor   : 'bottom center',
+                        longitude: '1',
+                        latitude: '0.298',
+                        tooltip :'Net Zero Enery Building',
+                        content: $("#txt-3").html()
+                    },
+                    {
+                        id: 'marker-4',
+                        image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+                     
+                        width    : 32,
+                        height   : 32,
+                        anchor   : 'bottom center',
+                        longitude: '2.6',
+                        latitude: '0.1',
+                        tooltip :'วงเวียนหน้าตึกอธิการบดี',
+                        content: $("#txt-4").html()
+                    },
+                    {
+                        id: 'marker-5',
+                        image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+                
+                        width    : 32,
+                        height   : 32,
+                        anchor   : 'bottom center',
+                        longitude: '3.2',
+                        latitude: '0.089',
+                        tooltip :'ที่จอด shuttle bus kku เก่า',
+                        content: $("#txt-5").html()
+                    },
+                    ],
+                position: [-80.156479, 25.666725, 3],
+                panoData: { poseHeading: 317 },
+            },
+            {
+                id      : '2',
+                panorama:'360/360/4.png',
+                thumbnail: '360/360/marker10_1.png',
+                name    : 'จุดที่หน้าสนใจจุดที่สอง',
+                links   : [
+                { nodeId: '1' },
+                { nodeId: '3' },
+                ],
+                markers: [
+                    {
+                        id: 'marker-1',
+                        image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+                   
+                        width    : 32,
+                        height   : 32,
+                        anchor   : 'bottom center',
+                        longitude: '-6.8',
+                        latitude: '0.07',
+                        tooltip :'สวนเกษตร มหาวิทยาลัยขอนแก่น',
+                        content: $("#txt-6").html()
+                    },
+                    {
+                        id: 'marker-2',
+                        image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+            
+                        width    : 32,
+                        height   : 32,
+                        anchor   : 'bottom center',
+                        longitude: '-14.5',
+                        latitude: '0.2',
+                        tooltip :'ตึกอธิการบดีตึกเก่า',
+                        content: $("#txt-8").html()
+                    },
+                    {
+                        id: 'marker-3',
+                        image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+                       
+                        width    : 32,
+                        height   : 32,
+                        anchor   : 'bottom center',
+                        longitude: '1',
+                        latitude: '0.298',
+                        tooltip :'Sirikunakorn Building',
+                        content: $("#txt-1").html()
+                    },
+                    {
+                        id: 'marker-4',
+                        image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+                     
+                        width    : 32,
+                        height   : 32,
+                        anchor   : 'bottom center',
+                        longitude: '2.5',
+                        latitude: '0.1',
+                        tooltip :'ศูนย์รับเอกสารส่วนกลาง',
+                        content: $("#txt-9").html()
+                    },
+                    {
+                        id: 'marker-5',
+                        image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+                
+                        width    : 32,
+                        height   : 32,
+                        anchor   : 'bottom center',
+                        longitude: '3.2',
+                        latitude: '0.089',
+                        tooltip :'Good แหนมเมือง',
+                        content: $("#txt-10").html()
+                    },
+                    ],
+                position: [-20.156168, 25.666623, 8],
+                panoData: { poseHeading: 140 },
+            },
+            {
+                id      : '3',
+                panorama:'360/360/2.jpg',
+                thumbnail: '360/360/11.jpg',
+                name    : 'จุดที่หน้าสนใจจุดที่สาม',
+                links   : [
+                { nodeId: '4' },
+                { nodeId: '2' },
+            
+                ],
+                markers: [
+                    {
+                        id: 'marker-1',
+                        image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+                   
+                        width    : 32,
+                        height   : 32,
+                        anchor   : 'bottom center',
+                        longitude: '-6.8',
+                        latitude: '0.07',
+                        tooltip :'สวนหน้าตึกอธิการ',
+                        content: "<h1>สวนหน้าตึกอธิการ</h1>เป็นสวนเล็กๆที่สามารถให้นั่งพักผ่อนได้"
+                    },
+                    {
+                        id: 'marker-2',
+                        image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+            
+                        width    : 32,
+                        height   : 32,
+                        anchor   : 'bottom center',
+                        longitude: '-7.3',
+                        latitude: '0.17',
+                        tooltip :'ศาลข้างหน้าตึกอธิการ',
+                        content: $("#txt-12").html()
+                    },
+                    {
+                        id: 'marker-3',
+                        image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+                       
+                        width    : 32,
+                        height   : 32,
+                        anchor   : 'bottom center',
+                        longitude: '1',
+                        latitude: '0.298',
+                        tooltip :'สำนักงานอธิการบดี',
+                        content: $("#txt-11").html()
+                    },
+                    {
+                        id: 'marker-4',
+                        image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+                     
+                        width    : 32,
+                        height   : 32,
+                        anchor   : 'bottom center',
+                        longitude: '2.3',
+                        latitude: '0.09',
+                        tooltip :'สวนเกษตรของคณะเกษตรศาสตร์  มหาวิทยาลัยขอนแก่น',
+                        content: $("#txt-14").html()
+                    },
+                    {
+                        id: 'marker-5',
+                        image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+                
+                        width    : 32,
+                        height   : 32,
+                        anchor   : 'bottom center',
+                        longitude: '2.89',
+                        latitude: '0.079',
+                        tooltip :'เป็นจุดรับแจ้งเหตุภายในมหาวิทยาลัยขอนแก่น',
+                        content: $("#txt-15").html()
+                    },
+                    ],
+                position: [1.692, 0.106, 8],
+                panoData: { poseHeading: 50  },
+            },
+            {
+                id      : '4',
+                panorama: '360/360/5.jpg',
+                thumbnail: '360/360/04.png',
+                name    : 'จุดที่หน้าสนใจจุดที่สี่',
+                links   : [
+                { nodeId: '2' },
+                { nodeId: '3' },
+                { nodeId: '5' },
+                ],
+                markers :[
+                    {
+                        id: 'marker-16',
+                        image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+                        width    : 32,
+                        height   : 32,
+                        longitude: '3',
+                        latitude: '0.099',
+                        tooltip :'  หน่วยงานบริหารจัดการกลาง',
+                        content :'<h1>  หน่วยงานบริหารจัดการกลาง</h1>'+"<img src='360/360/16.png'>"
+                    },
+                    {
+                        id: 'marker-17',
+                        image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+                        width    : 32,
+                        height   : 32,
+                        longitude: '-0.2',
+                        latitude: '0.12',
+                        tooltip :'  kku one stop service',
+                        content :'<h1>ส่วนบริการกองทรัพยากรบุคคล(One Stop Service) มหาวิทยาลัยขอนแก่น</h1>'+"จะเป็นหน่วยงานที่คอยดูแลเรื่องเอกสารของบุคลากรภายในมหาวิทยาลัย"
+                    },
+                    {
+                        id: 'marker-18',
+                        image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+                        width    : 32,
+                        height   : 32,
+                        longitude: '1',
+                        latitude: '0.09',
+                        tooltip :'ที่ออกกำลังกาย',
+                        content :'<h1>ที่ออกกำลังกาย</h1>'+"สามารถมาออกกำลังกายหรือนั่งเล่นได้ เหมือนเป็นสวนสุขภาพย่อมๆที่มีให้ผ่อนคลาย"
+                    }
+                    ,
+                    {
+                        id: 'marker-19',
+                        image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+                        width    : 32,
+                        height   : 32,
+                        longitude: '2.5',
+                        latitude: '0.01',
+                        tooltip :'ลานจอดรถ',
+                        content :'<h1>ลานจอดรถระหว่างตึกอธิการกับตึกSirikunakorn building</h1>'+"เป็นที่จอดรถบุคลากรหรือบุคคลที่มาติดต่อกับหน่วยงานต่างๆ"
+                    }
+                    ,
+                    {
+                        id: 'marker-20',
+                        image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+                        width    : 32,
+                        height   : 32,
+                        longitude: '-1.3 ',
+                        latitude: '0.2',
+                        tooltip :'ศูนย์รับเอกสารส่วนกลาง',
+                        content: $("#txt-9").html()
+                    }
+                ],
+
+                position: [30.156089, 25.666357, 3],
+                panoData: { poseHeading: 0 },
+            },
+            {
+                id      : '5',
+                panorama: '360/360/1.jpg',
+                thumbnail: '360/360/05.png',
+                name    : 'จุดที่หน้าสนใจจุดที่ห้า',
+                links   : [
+                { nodeId: '1' },
+                { nodeId: '4' },
+                ],
+                markers :[
+                {
+                        id: 'marker-21',
+                        image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+                        width    : 32,
+                        height   : 32,
+                        longitude: '2.8 ',
+                        latitude: '0.17',
+                        tooltip :'สนามบาส',
+                        content: '<h1>สนามบาสหลังตึก</h1> คนเล่นบาสส่วนใหญ่จะรู้จักที่นี้ดี เป็นที่เล่นบาสยามเย็นที่ดี มักจะมีคนมาเล่นบาสอยู่นี่เสมอ'
+                    },
+                    {
+                        id: 'marker-22',
+                        image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+                        width    : 32,
+                        height   : 32,
+                        longitude: '1',
+                        latitude: '0.2',
+                        tooltip :'Sirikunakorn Building',
+                        content: $("#txt-1").html()
+                    }
+                    ,
+                    {
+                        id: 'marker-23',
+                        image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+                        width    : 32,
+                        height   : 32,
+                        longitude: '5',
+                        latitude: '0.12',
+                        tooltip :'สนามตะกร้อ',
+                        content: '<h1>สนามตะกร้อ</h1>เป็นที่เล่นตะกร้อแต่ไม่เป็นที่นิยมนัก เนื่องจากบริเวณโดยรวบไม่ค่อยเอื้ออำนวยต่อการเล่นกีฬาสักเท่าไหร่'
+                    }
+                    ,
+                    {
+                        id: 'marker-24',
+                        image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+                        width    : 32,
+                        height   : 32,
+                        longitude: '-0.2',
+                        latitude: '0.15',
+                        tooltip :'ศาลา',
+                        content: '<h1>ศาลาเล็กๆ</h1>เป็นที่พักผ่อนคลายได้ มีขนาดไม่ใหญ่มากแต่ก็พอดีสำหรับการนั่งพักผ่อนตอนเที่ยง'
+                    }
+                    ,
+                    {
+                        id: 'marker-25',
+                        image: 'https://photo-sphere-viewer.js.org/assets/pin-red.png',
+                        width    : 32,
+                        height   : 32,
+                        longitude: '5.3',
+                        latitude: '0.11',
+                        tooltip :'สวนเกษตร',
+                        content: $("#txt-14").html()
+                    }
+                ],
+                position: [190.156292, 25.666446, 9],
+                panoData: { poseHeading: 0 },
+            },
+           
+            ], '1');
+
+    </script>
+</body>
+</html>
